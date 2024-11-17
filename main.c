@@ -30,7 +30,6 @@ int main()
 	//acima alocacao - abaixo scan elementos
 	
 	for(i = 0; i < a; i++){
-        
 		for(k = 0; k < b; k++){
 			scanf("%d", &m[i][k]);
 		}
@@ -38,16 +37,17 @@ int main()
 	
 	//impressao dos elemnetos da matriz
 	for(i = 0; i < a; i++){
-        
 		for(k = 0; k < b; k++){
-			printf("%d ", m[i][k]);
+			printf("%d", m[i][k]);
+			if(k < b-1){
+				printf(" ");
+			}
 		}
 		printf("\n");
 	}
 	
 	//desacolar memoria
 	for(i = 0; i < a; i++){
-        
 		free(m[i]);
 	}
 	free (m);
