@@ -18,14 +18,14 @@ int main()
 		
 		return 0;
 	}
-	
+	else{
 	
 	//alocar memoria p matriz
 	m = (int **)malloc(a * sizeof(int *));
 	
 	for(i = 0; i < a; i++){
 		m[i] = malloc(b * sizeof(int));
-	
+	}
 	
 	//acima alocacao - abaixo scan elementos
 	
@@ -48,6 +48,7 @@ int main()
 		}
 		printf(" \n");
 	}
+	
 	//desacolar memoria
 	for(i = 0; i < a; i++){
 		
