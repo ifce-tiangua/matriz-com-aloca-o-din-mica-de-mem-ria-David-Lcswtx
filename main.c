@@ -46,7 +46,14 @@ int main()
 				printf(" ");
 			}
 		}
-		printf("\n");
+		
+		if(i < a - 1){
+		
+		printf(" \n");
+		
+		}else{
+			printf("\n");
+		}
 	}
 	
 	//desacolar memoria
