@@ -46,7 +46,7 @@ int main()
 				printf(" ");
 			}
 		}
-		printf(" \n");
+		printf("\n");
 	}
 	
 	//desacolar memoria
