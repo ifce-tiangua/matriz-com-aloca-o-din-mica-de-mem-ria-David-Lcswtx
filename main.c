@@ -6,13 +6,13 @@ int main()
 {
 	
 	int **m; 
-	int a, b; // a = linha - b = coluna
-	int i, k; // elementos para os loops no for
+	int a, b;
+	int i, j; 
 	
 	scanf("%d", &a);
 	scanf("%d", &b);
 	
-	if(a <= 0 || b <= 0){
+	if(a == 0 || b == 0){
 		
 		printf("[matriz vazia]\n");
 		
@@ -21,28 +21,28 @@ int main()
 	else{
 	
 	//alocar memoria p matriz
-	m = (int **)malloc((2 * a) * sizeof(int *));
+	m = (int **)malloc(a * sizeof(int *));
 	
 	for(i = 0; i < a; i++){
-		m[i] = malloc((2 * b) * sizeof(int));
+		m[i] = malloc(b * sizeof(int));
 	}
 	
 	//acima alocacao - abaixo scan elementos
 	
 	for(i = 0; i < a; i++){
-		for(k = 0; k < b; k++){
-			scanf("%d", &m[i][k]);
+		for(j = 0; j < b; j++){
+			scanf("%d", &m[i][j]);
 		}
 	}
 	
 	//impressao dos elemnetos da matriz
 	for(i = 0; i < a; i++){
 		
-		for(k = 0; k < b; k++){
+		for(j = 0; j < b; j++){
 			
-			printf("%d", m[i][k]);
+			printf("%d", m[i][j]);
 			
-			if(k < b - 1){
+			if(j < b - 1){
 				printf(" ");
 			}
 		}
@@ -56,10 +56,7 @@ int main()
 		
 	}
 	free (m);
-	
-	return 0;
-	
-	}
+}
 	
 	return 0;
 	
