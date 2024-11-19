@@ -21,10 +21,10 @@ int main()
 	else{
 	
 	//alocar memoria p matriz
-	m = (int **)malloc(a * sizeof(int *));
+	m = (int **)malloc((2 * a) * sizeof(int *));
 	
 	for(i = 0; i < a; i++){
-		m[i] = malloc(b * sizeof(int));
+		m[i] = malloc((2 * b) * sizeof(int));
 	}
 	
 	//acima alocacao - abaixo scan elementos
