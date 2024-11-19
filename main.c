@@ -24,7 +24,7 @@ int main()
 	m = (int **)malloc(a * sizeof(int *));
 	
 	for(i = 0; i < a; i++){
-		m[i] = malloc(b * sizeof(int));
+		m[i] = (int *)malloc(b * sizeof(int));
 	}
 	
 	//acima alocacao - abaixo scan elementos
